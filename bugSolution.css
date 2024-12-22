@@ -1,0 +1,17 @@
+/* bugSolution.css */
+.element::before {
+  content: "This is the text: " attr(data-text);
+}
+
+.element {
+  data-text: "This text has no issues.";
+}
+
+/*Proper escaping of the variable for safe handling*/
+.element2::before {
+  content: "This is the text: " attr(data-text2);
+}
+
+.element2 {
+  data-text2: "This text contains a quote \" and other special characters like \\\\ and parentheses ( ).";
+}
